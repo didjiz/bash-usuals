@@ -134,6 +134,7 @@ alias untarbz2="tar xvjf "
 
 # Git
 alias gst="git status"
+alias gfo="git fetch origin"
 alias ga="git add"
 alias gd="git diff"
 alias gc="git commit -m"
