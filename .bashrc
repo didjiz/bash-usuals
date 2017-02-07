@@ -121,8 +121,11 @@ fi
 # Surcharge
 source ~/.bashrc_extends;
 
-# Conf
+# Conf globale
 shopt -s autocd;
+
+# Autocompletion commande basee sur l'historique
+bind '"\e[A": history-search-backward'
 
 # Custom
 alias x="exit;"
