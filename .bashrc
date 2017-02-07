@@ -143,6 +143,8 @@ alias gamend="git commit --amend --no-edit"
 alias gdev="git co develop"
 alias gglob="workspaceGitCheck"
 
+function getgitroot() { git rev-parse --show-toplevel; }
+
 # Check dossier travail
 function workspaceGitCheck 
 {
@@ -168,4 +170,9 @@ alias sf="php bin/console "
 # Current git branch
 export PS1='\[\033[01;32m\]\h\[\033[01;34m\] \w\[\033[31m\]$(__git_ps1 "(%s)") \[\033[01;34m\]$\[\033[00m\] '
 export GIT_PS1_SHOWUNTRACKEDFILES=1
+
+# Terminal naming
+function nametab { PROMPT_COMMAND='echo -en "\033]0;'$1'\a"' ; }
+function nametabgitproject() { nametab `basename $(getgitroot)`; }
+alias ntg='nametabgitproject'
 
