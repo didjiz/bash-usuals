@@ -142,6 +142,7 @@ alias gbr="git branch "
 alias gamend="git commit --amend --no-edit"
 alias gdev="git co develop"
 alias gglob="workspaceGitCheck"
+alias groot='cd `getgitroot`;' # I am Groot.
 
 function getgitroot() { git rev-parse --show-toplevel; }
 
