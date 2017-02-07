@@ -1,2 +1,2 @@
 # bash-usuals
-Mes commandes habituelles, rien de plus...
+Parce que ça me gonfle de refaire ma conf à chaque nouvelle machine.
