@@ -1,7 +1,7 @@
 # bash-usuals
 Parce que ça me gonfle de refaire ma conf à chaque nouvelle machine.
 
-### Installations
+### Installations standards
 
 ```bash
 sudo apt-get -y install vim
@@ -55,4 +55,10 @@ ln -s bash-usuals/.bashrc
 touch .bashrc_extends
 source .bashrc
 git config --global include.path ~/bash-usuals/.gitconfig_global_include
+```
+
+### Mysql
+
+```bash
+sudo apt-get install -y mysql-workbench
 ```
