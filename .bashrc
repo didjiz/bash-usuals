@@ -120,6 +120,7 @@ fi
 
 # Surcharge
 source ~/.bashrc_extends;
+alias ebext='vi ~/.bashrc_extends'
 
 # Conf globale
 shopt -s autocd;
