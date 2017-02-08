@@ -11,7 +11,7 @@ sudo apt-get -y install git
 sudo apt-get -y install composer 
 ```
 
-## Phpstorm
+### Phpstorm
 
 ```bash
 wget http://download.jetbrains.com/webide/PhpStorm-9.0.3.tar.gz
