@@ -130,7 +130,7 @@ bind '"\e[A": history-search-backward'
 
 # Custom
 alias x="exit"
-alias eb="vi ~/.bashrc;"
+alias eb="vi ~/.bashrc"
 alias sb="source ~/.bashrc"
 alias c="clear"
 alias untargz="tar zxvf "

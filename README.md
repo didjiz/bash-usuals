@@ -19,6 +19,14 @@ Si lien KO : https://confluence.jetbrains.com/display/PhpStorm/Previous+PhpStorm
 
 Licence : https://gist.github.com/esilvajr/e3440020ce17e95f56bd
 
+Si JDK non installé :
+
+```bash
+sudo add-apt-repository ppa:webupd8team/java
+sudo apt-get update
+sudo apt-get install oracle-java8-installer
+```
+
 ### Git
 
 ```bash
