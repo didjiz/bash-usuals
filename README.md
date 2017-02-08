@@ -46,4 +46,5 @@ rm .bashrc
 ln -s bash-usuals/.bashrc
 touch .bashrc_extends
 source .bashrc
+git config --global include.path ~/bash-usuals/.gitconfig_global_include
 ```
