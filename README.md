@@ -1,22 +1,42 @@
 # bash-usuals
 Parce que ça me gonfle de refaire ma conf à chaque nouvelle machine.
 
-# La base
+## La base
+
+### Installations
 
 ```bash
 sudo apt-get -y install vim
 sudo apt-get -y install git
+sudo apt-get -y install composer 
+```
+
+## Phpstorm
+
+```bash
+wget http://download.jetbrains.com/webide/PhpStorm-9.0.3.tar.gz
+```
+
+Si lien KO : https://confluence.jetbrains.com/display/PhpStorm/Previous+PhpStorm+Releases (v9 working)
+Licence : https://gist.github.com/esilvajr/e3440020ce17e95f56bd
+
+### Git
+
+```bash
+git config --global user.name "M.Gilles"
+git config --global user.email "-- Replace this --"
+git config --global core.editor vim
 ```
 
 
-# Changer l'application switcher :
+## Changer l'application switcher :
 ```bash
 gnome-shell-extension-prefs `
 ```
 
 Définir AlternateTab = Oui
 
-# Ajouter les raccourcis 
+## Ajouter les raccourcis 
 
 ```bash
 cd ~
