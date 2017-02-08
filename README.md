@@ -27,6 +27,8 @@ git config --global user.email "-- Replace this --"
 git config --global core.editor vim
 ```
 
+Se souvenir de la passphrase : http://stackoverflow.com/questions/10032461/git-keeps-asking-me-for-my-ssh-key-passphrase#answer-10032655
+
 
 ### Changer l'application switcher :
 ```bash
