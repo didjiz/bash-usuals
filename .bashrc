@@ -128,10 +128,10 @@ shopt -s autocd;
 bind '"\e[A": history-search-backward'
 
 # Custom
-alias x="exit;"
+alias x="exit"
 alias eb="vi ~/.bashrc;"
 alias sb="source ~/.bashrc"
-alias c="clear;"
+alias c="clear"
 alias untargz="tar zxvf "
 alias untarbz2="tar xvjf "
 
@@ -170,6 +170,7 @@ function workspaceGitCheck
 # Symfony
 alias fuckcache='rm -rf var/cache/dev/*'
 alias sf="php bin/console "
+function phpunitSfSingle() { php bin/phpunit --configuration app/phpunit.xml --filter="$1"; }
 
 # Current git branch
 export PS1='\[\033[01;32m\]\h\[\033[01;34m\] \w\[\033[31m\]$(__git_ps1 "(%s)") \[\033[01;34m\]$\[\033[00m\] '
