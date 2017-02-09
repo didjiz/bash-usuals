@@ -2,3 +2,5 @@
 	co = checkout
 	br = branch
 	st = status
+[core]
+	editor = vim

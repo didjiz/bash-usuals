@@ -182,3 +182,6 @@ function nametab { PROMPT_COMMAND='echo -en "\033]0;'$1'\a"' ; }
 function nametabgitproject() { nametab `basename $(getgitroot)`; }
 alias ntg='nametabgitproject'
 
+# PhpStorm
+alias phpstorm="/usr/local/bin/pstorm"
+
