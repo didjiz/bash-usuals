@@ -2,5 +2,16 @@
 	co = checkout
 	br = branch
 	st = status
+ 
+	lg = log --oneline --graph --abbrev-commit --decorate
+	lga = log --graph --oneline --abbrev-commit --decorate --all
+
 [core]
 	editor = vim
+
+[color]
+    	ui = auto
+
+[push]
+    	default = current 
+

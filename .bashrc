@@ -150,6 +150,10 @@ alias groot='cd `getgitroot`;' # I am Groot.
 
 function getgitroot() { git rev-parse --show-toplevel; }
 
+# Git : hooks
+alias gitDisablePrecommitHook="mv .git/hooks/pre-commit .git/hooks/pre-commit.sample"
+alias gitEnablePrecommitHook="mv .git/hooks/pre-commit.sample .git/hooks/pre-commit"
+
 # Check dossier travail
 function workspaceGitCheck 
 {
