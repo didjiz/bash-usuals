@@ -50,10 +50,12 @@ Définir AlternateTab = Oui
 ```bash
 cd ~
 git clone https://github.com/didjiz/bash-usuals.git
-rm .bashrc
-ln -s bash-usuals/.bashrc
+rm -f .bashrc
+ln -s bash-usuals/.bashrc .bashrc
 touch .bashrc_extends
 source .bashrc
+rm -f .vimrc
+ln -s bash-usuals/.vimrc .vimrc
 git config --global include.path ~/bash-usuals/.gitconfig_global_include
 ```
 
