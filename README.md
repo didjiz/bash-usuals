@@ -57,6 +57,7 @@ source .bashrc
 rm -f .vimrc
 ln -s bash-usuals/.vimrc .vimrc
 git config --global include.path ~/bash-usuals/.gitconfig_global_include
+ln -s bash-usuals/.gitignore_global .gitignore_global
 ```
 
 ### Mysql
