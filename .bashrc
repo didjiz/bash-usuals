@@ -133,11 +133,13 @@ alias x="exit"
 alias eb="vi ~/.bashrc"
 alias sb="source ~/.bashrc"
 alias c="clear"
+alias la="ls -la"
 alias untargz="tar zxvf "
 alias untarbz2="tar xvjf "
 
 # Git
 alias gst="git status"
+alias gsth="git status .";
 alias gfo="git fetch origin"
 alias ga="git add"
 alias gd="git diff"
@@ -147,6 +149,15 @@ alias gamend="git commit --amend --no-edit"
 alias gdev="git co develop"
 alias gglob="workspaceGitCheck"
 alias groot='cd `getgitroot`;' # I am Groot.
+alias glo="git log --pretty='format:%C(yellow)%h%Creset %C(bold blue)%<(12,trunc)%ci%x08%x08%Creset %s'"
+alias glos="glo | head -n 5"
+alias ggrep="git grep -i --break";
+alias gitoups="git reset HEAD~1; git add ."
+alias gitouups="git reset HEAD~2; git add ."
+alias gitouuups="git reset HEAD~3; git add ."
+alias rmswp="git status | grep \".swp\" | xargs rm"
+alias gitshowlast="git show HEAD^..HEAD"
+alias gitremoveuntracked="git status --porcelain | sed -e \"s/\?\?//g\" | xargs rm -rf"
 
 function getgitroot() { git rev-parse --show-toplevel; }
 

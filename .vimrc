@@ -1,7 +1,7 @@
 
 " Coloration
 syntax on
-colorscheme default
+"colorscheme default
 
 " Conf diverse
 set backspace=indent,eol,start
