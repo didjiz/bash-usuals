@@ -124,12 +124,12 @@ fi
 export EDITOR=vim # Editeur par défaut
 
 # Git / terminal
-export GIT_PS1_SHOWDIRTYSTATE=1 # Montre si modif de la copie locale (*) ou (+) pour l'index
-export GIT_PS1_SHOWSTASHSTATE=1 # Montre si éléments stashés ($)
-export GIT_PS1_SHOWUNTRACKEDFILES=1 # Montre si fichiers non versionnés (%)
-export GIT_PS1_SHOWUPSTREAM=verbose # Avance/Retard par rapport à la branche distante (<) (>) (=)
-export GIT_PS1_DESCRIBE_STYLE=branch # Si detached HAED alors affiche des infos utiles
-export GIT_PS1_SHOWCOlORHINTS=true # Active les couleurs fournis par .git-prompt.sh
+#export GIT_PS1_SHOWDIRTYSTATE=1 # Montre si modif de la copie locale (*) ou (+) pour l'index
+#export GIT_PS1_SHOWSTASHSTATE=1 # Montre si éléments stashés ($)
+#export GIT_PS1_SHOWUNTRACKEDFILES=1 # Montre si fichiers non versionnés (%)
+#export GIT_PS1_SHOWUPSTREAM=verbose # Avance/Retard par rapport à la branche distante (<) (>) (=)
+#export GIT_PS1_DESCRIBE_STYLE=branch # Si detached HAED alors affiche des infos utiles
+#export GIT_PS1_SHOWCOlORHINTS=true # Active les couleurs fournis par .git-prompt.sh
 
 # Surcharge
 source ~/.bashrc_extends;
@@ -141,13 +141,6 @@ shopt -s autocd;
 # Autocompletion commande basee sur l'historique
 bind '"\e[A": history-search-backward'
 bind '"\e[B": history-search-forward'
-bind '\e[1;5C': forward-word
-bind '\e[1;5D': backward-word
-bind '\e[5C': forward-word
-bind '\e[5D': backward-word
-bind '\e\e[C': forward-word
-bind '\e\e[D': backward-word
-
 
 # Custom
 alias x="exit"
