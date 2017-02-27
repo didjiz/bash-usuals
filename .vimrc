@@ -20,6 +20,7 @@ set ls=2
 :map <F6> <C-]>
 :map <F7> :e# <CR>
 map <C-t> :tabe <CR>  
+map <C-w> :q <CR>  
 noremap <S-Tab> :tabp<CR>
 noremap <Tab> :tabn<CR>
 
