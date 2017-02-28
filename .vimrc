@@ -27,6 +27,8 @@ noremap <Tab> :tabn<CR>
 " Fautes de frappes ...
 :command W w
 :command Q q
+:command WQ wq
+:command Wq wq
 
 " Indentations
 filetype plugin indent on
