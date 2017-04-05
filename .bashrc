@@ -174,6 +174,7 @@ alias gitshowlast="git show HEAD^..HEAD"
 alias gitremoveuntracked="git status --porcelain | sed -e \"s/\?\?//g\" | xargs rm -rf"
 
 function getgitroot() { git rev-parse --show-toplevel; }
+function gitextends() { currBranch=$(git rev-parse --abbrev-ref HEAD) ; git co -b $currBranch$1; }
 
 # Git : hooks
 alias gitDisablePrecommitHook="mv .git/hooks/pre-commit .git/hooks/pre-commit.sample"
