@@ -163,7 +163,7 @@ alias gbr="git branch "
 alias gamend="git commit --amend --no-edit"
 alias gdev="git co develop"
 alias gglob="workspaceGitCheck"
-alias groot='cd `getgitroot`;' # I am Groot.
+alias groot='echo "I am groot !"; cd `getgitroot`;' # I am Groot.
 alias glo="git log --pretty='format:%C(yellow)%h%Creset %C(bold blue)%<(12,trunc)%ci%x08%x08%Creset %s'"
 alias glos="glo | head -n 5"
 alias ggrep="git grep -i --break";
