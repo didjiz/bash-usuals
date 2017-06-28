@@ -173,9 +173,11 @@ alias gitouuups="git reset HEAD~3; git add ."
 alias rmswp="git status | grep \".swp\" | xargs rm"
 alias gitshowlast="git show HEAD^..HEAD"
 alias gitremoveuntracked="git status --porcelain | sed -e \"s/\?\?//g\" | xargs rm -rf"
+alias gitshowbranchhistory="gitShowBranchHistory"
 
 function getgitroot() { git rev-parse --show-toplevel; }
 function gitextends() { currBranch=$(git rev-parse --abbrev-ref HEAD) ; git co -b $currBranch$1; }
+function gitShowBranchHistory () { for branch in `git branch -l | grep -v '*'`;do echo -e `git show --format="%ad (%cr)" --date=format:%Y-%m-%d $branch | head -n 1` \\t$branch; done | sort -r; }
 
 # Git : hooks
 alias gitDisablePrecommitHook="mv .git/hooks/pre-commit .git/hooks/pre-commit.sample"
