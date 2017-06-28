@@ -173,7 +173,7 @@ alias gitouuups="git reset HEAD~3; git add ."
 alias rmswp="git status | grep \".swp\" | xargs rm"
 alias gitshowlast="git show HEAD^..HEAD"
 alias gitremoveuntracked="git status --porcelain | sed -e \"s/\?\?//g\" | xargs rm -rf"
-alias gitshowbranchhistory="gitShowBranchHistory"
+alias gbrhistory="gitShowBranchHistory"
 
 function getgitroot() { git rev-parse --show-toplevel; }
 function gitextends() { currBranch=$(git rev-parse --abbrev-ref HEAD) ; git co -b $currBranch$1; }
