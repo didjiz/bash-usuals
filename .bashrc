@@ -172,6 +172,7 @@ alias gitouups="git reset HEAD~2; git add ."
 alias gitouuups="git reset HEAD~3; git add ."
 alias rmswp="git status | grep \".swp\" | xargs rm"
 alias gitshowlast="git show HEAD^..HEAD"
+alias gitshowlastshort="git show HEAD^..HEAD --name-only"
 alias gitremoveuntracked="git status --porcelain | sed -e \"s/\?\?//g\" | xargs rm -rf"
 alias gbrhistory="gitShowBranchHistory"
 
