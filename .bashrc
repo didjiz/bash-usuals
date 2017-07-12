@@ -13,10 +13,6 @@ export EDITOR=vim # Editeur par défaut
 #export GIT_PS1_DESCRIBE_STYLE=branch # Si detached HAED alors affiche des infos utiles
 #export GIT_PS1_SHOWCOlORHINTS=true # Active les couleurs fournis par .git-prompt.sh
 
-# Surcharge
-source ~/.bashrc_extends;
-alias ebext='vi ~/.bashrc_extends'
-
 # Conf globale
 shopt -s autocd;
 shopt -s checkwinsize
@@ -143,3 +139,7 @@ ai () {
     echo -e "Tested : \"$fileTest\"\n"
     php vendor/atoum/atoum/bin/atoum `getgitroot`/$fileTest
 }
+
+# Surcharge
+source ~/.bashrc_extends;
+alias ebext='vi ~/.bashrc_extends'
