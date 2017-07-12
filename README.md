@@ -19,6 +19,8 @@ Si lien KO : https://confluence.jetbrains.com/display/PhpStorm/Previous+PhpStorm
 
 Licence : https://gist.github.com/esilvajr/e3440020ce17e95f56bd
 
+Ajouter au launcher : https://askubuntu.com/questions/220512/how-can-i-create-launcher-icon-for-phpstorm#answer-223833
+
 Si JDK non installé :
 
 ```bash
