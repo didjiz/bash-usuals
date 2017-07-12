@@ -40,7 +40,7 @@ Se souvenir de la passphrase : http://stackoverflow.com/questions/10032461/git-k
 
 ### Changer l'application switcher :
 ```bash
-gnome-shell-extension-prefs `
+gnome-shell-extension-prefs 
 ```
 
 Définir AlternateTab = Oui
@@ -50,7 +50,7 @@ Définir AlternateTab = Oui
 ```bash
 cd ~
 git clone https://github.com/didjiz/bash-usuals.git
-rm -f .bashrc
+mv .bashrc .bashrc_native
 ln -s bash-usuals/.bashrc .bashrc
 touch .bashrc_extends
 source .bashrc
