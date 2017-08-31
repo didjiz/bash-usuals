@@ -1,5 +1,6 @@
 
 source ~/.bashrc_native;
+source ~/bash-usuals/dev-shell-essentials/dev-shell-essentials.sh
 
 ################################################################
 
@@ -88,7 +89,8 @@ alias fuckcache="rm -rf {app,var}/cache/*"
 function sf () { php $(find . -maxdepth 2 -mindepth 1 -name 'console' -type f | head -n 1) $@; }                                                                               
 
 # Current git branch
-export PS1='\[\033[01;32m\]\h\[\033[01;34m\] \w\[\033[31m\]$(__git_ps1 "(%s)") \[\033[01;34m\]$\[\033[00m\] '
+export PS1='\[\033[01;32m\]\h\[\033[01;34m\] \w\[\033[31m\]$(__git_ps1 "(%s)") \[\033[01;34m\]$\[\033[00m\] ' # Full path
+#export PS1='\[\033[01;32m\]\h\[\033[01;34m\] \W\[\033[31m\]$(__git_ps1 "(%s)") \[\033[01;34m\]$\[\033[00m\] ' # Short path
 export GIT_PS1_SHOWUNTRACKEDFILES=1
 
 # Terminal naming

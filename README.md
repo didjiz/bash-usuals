@@ -60,6 +60,7 @@ rm -f .vimrc
 ln -s bash-usuals/.vimrc .vimrc
 git config --global include.path ~/bash-usuals/.gitconfig_global_include
 ln -s bash-usuals/.gitignore_global .gitignore_global
+git clone https://github.com/kepkin/dev-shell-essentials.git ~/bash-usuals/dev-shell-essentials
 ```
 
 ### Mysql
