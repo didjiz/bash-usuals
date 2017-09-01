@@ -146,3 +146,12 @@ ai () {
 # Surcharge
 source ~/.bashrc_extends;
 alias ebext='vi ~/.bashrc_extends'
+
+# Autres 
+tbcheck () {
+    wget -q -O - https://www.terre-bitume.org/f109-sud-est \
+        | xmllint --html --xpath '//table[@class = "forumline"]' - 2>/dev/null \
+        | sed 's/-->»/\n/g' | grep t6490 | sed 's/<[^>]*>/ /g' | sed 's/<br \/>//g' \
+        | sed 's/<br>//g' | sed 's/<img[^>]*>//' | sed 's/<!--//g'
+}
+
