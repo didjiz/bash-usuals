@@ -121,6 +121,16 @@ alias enableXdebug="sudo echo; sudo echo /etc/php5/apache2/conf.d/20-xdebug.ini 
 alias disableXdebug="sudo echo; sudo echo /etc/php5/apache2/conf.d/20-xdebug.ini | sudo xargs sed -i 's/zend/;zend/'; apacherestart;";
 alias statusXdebug="cat /etc/php5/apache2/conf.d/20-xdebug.ini | grep zend_extension";
 
+startXDebugCli () {
+    export XDEBUG_CONFIG="idekey=phpstorm-xdebug remote_host="$MY_WORKSPACE_IP
+    export PHP_IDE_CONFIG="serverName="$MY_TEST_ENV_URL
+}
+
+stopXDebugCli () {
+    unset PHP_IDE_CONFIG
+    unset XDEBUG_CONFIG
+}
+
 # Auto-Complétion
 complete -cf sudo
 complete -cf man
@@ -153,5 +163,11 @@ tbcheck () {
         | xmllint --html --xpath '//table[@class = "forumline"]' - 2>/dev/null \
         | sed 's/-->»/\n/g' | grep t6490 | sed 's/<[^>]*>/ /g' | sed 's/<br \/>//g' \
         | sed 's/<br>//g' | sed 's/<img[^>]*>//' | sed 's/<!--//g'
+}
+
+txtToMd5 () {
+    for f in *.txt; do
+        md5sum $f 2>/dev/null | sed 's/^\([^ ]*\).*/\1/g' > `echo "./$f" | sed 's/txt/md5/'` ;
+    done
 }
 
