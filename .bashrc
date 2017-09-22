@@ -94,7 +94,10 @@ export PS1='\[\033[01;32m\]\h\[\033[01;34m\] \w\[\033[31m\]$(__git_ps1 "(%s)") \
 export GIT_PS1_SHOWUNTRACKEDFILES=1
 
 # Terminal naming
-function nametab { PROMPT_COMMAND='echo -en "\033]0;'$1'\a"' ; }
+function nametab {
+    [[ $1 = '.' ]] && name="${PWD##*/}" || name="$1"
+    PROMPT_COMMAND='echo -en "\033]0;'$name'\a"' ;
+}
 function nametabgitproject() { nametab `basename $(getgitroot)`; }
 alias ntg='nametabgitproject'
 
