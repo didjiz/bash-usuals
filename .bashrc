@@ -161,6 +161,9 @@ source ~/.bashrc_extends;
 alias ebext='vi ~/.bashrc_extends'
 
 # Autres 
+
+alias killNautilus="ps -C nautilus -o pid= | xargs kill -9" # He deserved it.
+
 tbcheck () {
     wget -q -O - https://www.terre-bitume.org/f109-sud-est \
         | xmllint --html --xpath '//table[@class = "forumline"]' - 2>/dev/null \
