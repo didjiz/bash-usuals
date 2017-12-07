@@ -177,3 +177,5 @@ txtToMd5 () {
     done
 }
 
+alias meteo="c && curl wttr.in/Lyon"
+
