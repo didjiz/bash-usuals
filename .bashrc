@@ -163,6 +163,7 @@ alias ebext='vi ~/.bashrc_extends'
 # Autres 
 
 alias killNautilus="ps -C nautilus -o pid= | xargs kill -9" # He deserved it.
+alias killChrome="ps -C chrome -o pid= | xargs kill -9"
 
 tbcheck () {
     wget -q -O - https://www.terre-bitume.org/f109-sud-est \
@@ -177,5 +178,5 @@ txtToMd5 () {
     done
 }
 
-alias meteo="c && curl wttr.in/Lyon"
+alias meteo="c && curl fr.wttr.in/Lyon"
 
