@@ -2,6 +2,7 @@
 " Coloration
 syntax on
 "colorscheme default
+:color desert " @see : https://unix.stackexchange.com/questions/88879
 
 " Conf diverse
 set backspace=indent,eol,start
