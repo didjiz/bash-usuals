@@ -156,6 +156,9 @@ ai () {
     php vendor/atoum/atoum/bin/atoum `getgitroot`/$fileTest
 }
 
+# Ssh
+alias ssh-nokey="ssh -o 'PubkeyAuthentication no' "
+
 # Surcharge
 source ~/.bashrc_extends;
 alias ebext='vi ~/.bashrc_extends'
