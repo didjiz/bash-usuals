@@ -57,7 +57,8 @@ alias gitshowlastshort="git show HEAD^..HEAD --name-only"
 alias gitshowshort="git show --name-only"
 alias gs="git show"
 alias gsl="gitshowlast"
-alias gsls="gitshowshort"
+alias gss="gitshowshort"
+alias gsls="gitshowlastshort"
 alias gitremoveuntracked="git status --porcelain | sed -e \"s/\?\?//g\" | xargs rm -rf"
 alias gbrhistory="gitShowBranchHistory"
 
@@ -89,7 +90,7 @@ function workspaceGitCheck
 
 # Symfony
 function phpunitSfSingle() { php bin/phpunit --configuration app/phpunit.xml --filter="$1"; }
-alias fuckcache="rm -rf {app,var}/cache/*"
+alias fuckcache="rm -rf {app,var}/cache/* ;"
 function sf () { php $(find . -maxdepth 2 -mindepth 1 -name 'console' -type f | head -n 1) $@; }                                                                               
 
 # Current git branch
