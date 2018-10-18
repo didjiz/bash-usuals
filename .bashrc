@@ -61,6 +61,7 @@ alias gss="gitshowshort"
 alias gsls="gitshowlastshort"
 alias gitremoveuntracked="git status --porcelain | sed -e \"s/\?\?//g\" | xargs rm -rf"
 alias gbrhistory="gitShowBranchHistory"
+alias gitDisableFilemode="sed -i 's/filemode = true/filemode = false/' .git/config"
 
 function getgitroot() { git rev-parse --show-toplevel; }
 function gitextends() { currBranch=$(git rev-parse --abbrev-ref HEAD) ; git co -b $currBranch$1; }
