@@ -1,6 +1,5 @@
 
 source ~/.bashrc_native;
-source ~/bash-usuals/dev-shell-essentials/dev-shell-essentials.sh
 
 ################################################################
 
