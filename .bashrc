@@ -14,8 +14,8 @@ export EDITOR=vim # Editeur par défaut
 #export GIT_PS1_SHOWCOlORHINTS=true # Active les couleurs fournis par .git-prompt.sh
 
 # Conf globale
-shopt -s autocd;
-shopt -s checkwinsize
+#shopt -s autocd;
+#shopt -s checkwinsize
 
 # Autocompletion commande basee sur l'historique
 bind '"\e[A": history-search-backward'
@@ -145,9 +145,11 @@ complete -cf man
 
 # Docker
 alias dockerstop="docker stop \$(docker ps -a -q)"
+alias dps="docker ps -a"
 alias dcstart="docker-compose start"
 alias dcrestart="docker-compose restart"
 alias dcstop="docker-compose stop"
+alias dcstopall='docker stop $(docker ps -a -q)'
 alias dockerphp56="docker run php:5.6 php -r "
 alias dockerphp7="docker run php:7 php -r "
 
