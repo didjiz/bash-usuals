@@ -64,6 +64,7 @@ alias gitDisableFilemode="sed -i 's/filemode = true/filemode = false/' .git/conf
 
 function getgitroot() { git rev-parse --show-toplevel; }
 function gitextends() { currBranch=$(git rev-parse --abbrev-ref HEAD) ; git co -b $currBranch$1; }
+alias gitbackup="gitextends _backup";
 function gitShowBranchHistory () { for branch in `git branch -l | grep -v '*'`;do echo -e `git show --format="%ad (%cr)" --date=format:"%Y-%m-%d %H:%I:%S" $branch | head -n 1` \\t$branch; done | sort -r; }
 
 # Git : hooks
