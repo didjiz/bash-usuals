@@ -29,6 +29,12 @@ sudo apt-get update
 sudo apt-get install oracle-java8-installer
 ```
 
+Ne pas concaténer les use :
+
+```
+Editor > General > Code Folding > Imports
+```
+
 ### Git
 
 ```bash

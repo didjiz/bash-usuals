@@ -14,12 +14,12 @@ export EDITOR=vim # Editeur par défaut
 #export GIT_PS1_SHOWCOlORHINTS=true # Active les couleurs fournis par .git-prompt.sh
 
 # Conf globale
-#shopt -s autocd;
+shopt -s autocd;
 #shopt -s checkwinsize
 
 # Autocompletion commande basee sur l'historique
-bind '"\e[A": history-search-backward'
-bind '"\e[B": history-search-forward'
+#bind '"\e[A": history-search-backward'
+#bind '"\e[B": history-search-forward'
 
 # Custom
 alias x="exit"
@@ -153,6 +153,10 @@ alias dcstop="docker-compose stop"
 alias dcstopall='docker stop $(docker ps -a -q)'
 alias dockerphp56="docker run php:5.6 php -r "
 alias dockerphp7="docker run php:7 php -r "
+alias dockerimagesrm='docker image rm  $(docker image list -q)'
+alias dockerimageslist='docker image list -a'
+alias dockercontainerlist='docker container ls -a'
+alias dockercontainerrm='docker container rm $(docker container ls -aq)'
 
 # Atoum
 alias atoum="clear; php vendor/atoum/atoum/bin/atoum "
@@ -170,6 +174,9 @@ alias ssh-nokey="ssh -o 'PubkeyAuthentication no' "
 # Surcharge
 source ~/.bashrc_extends;
 alias ebext='vi ~/.bashrc_extends'
+
+# Makefile
+alias mi="make install"
 
 # Autres 
 
