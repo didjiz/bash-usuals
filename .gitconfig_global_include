@@ -5,6 +5,7 @@
  
 	lg = log --oneline --graph --abbrev-commit --decorate
 	lga = log --graph --oneline --abbrev-commit --decorate --all
+    pn = !git log --pretty='format: - %s' --no-merges $(git describe --abbrev=0 --tags)..HEAD
 
 [core]
 	editor = vim
