@@ -44,7 +44,8 @@ alias gamend="git commit --amend --no-edit"
 alias gdev="git co develop"
 alias gglob="workspaceGitCheck"
 alias groot='echo "I am groot !"; cd `getgitroot`;' # I am Groot.
-alias glo="git log --pretty='format:%C(yellow)%h%Creset %C(bold blue)%<(12,trunc)%ci%x08%x08%Creset %s'"
+#alias glo="git log --pretty='format:%C(yellow)%h%Creset %C(bold blue)%<(12,trunc)%ci%x08%x08%Creset %s'"
+alias glo="git log --pretty='format:%C(yellow)%h%Creset %C(bold blue)%<(12,trunc)%ci%x08%x08%Creset %s %C(cyan)(%aN)%Creset' --color=always"
 alias glos="glo | head -n 5"
 alias ggrep="git grep -i --break";
 alias gitoups="git reset HEAD~1; git add ."
@@ -61,6 +62,8 @@ alias gsls="gitshowlastshort"
 alias gitremoveuntracked="git status --porcelain | sed -e \"s/\?\?//g\" | xargs rm -rf"
 alias gbrhistory="gitShowBranchHistory"
 alias gitDisableFilemode="sed -i 's/filemode = true/filemode = false/' .git/config"
+alias guillotine="git reset HEAD"
+alias gitresetbourrin='git fetch origin && git reset --hard origin/$(git rev-parse --abbrev-ref HEAD)'
 
 function getgitroot() { git rev-parse --show-toplevel; }
 function gitextends() { currBranch=$(git rev-parse --abbrev-ref HEAD) ; git co -b $currBranch$1; }
@@ -146,7 +149,9 @@ complete -cf man
 
 # Docker
 alias dockerstop="docker stop \$(docker ps -a -q)"
-alias dps="docker ps -a"
+alias dps="docker ps -a --format 'table {{.Names}}\t{{.Status}}'"
+alias dpss="docker ps -a --format 'table {{.Names}}\t{{.Status}}\t{{.Image}}'"
+alias dpsss="docker ps -a"
 alias dcstart="docker-compose start"
 alias dcrestart="docker-compose restart"
 alias dcstop="docker-compose stop"
@@ -182,6 +187,9 @@ alias mi="make install"
 
 alias killNautilus="ps -C nautilus -o pid= | xargs kill -9" # He deserved it.
 alias killChrome="ps -C chrome -o pid= | xargs kill -9"
+alias killSlack="ps -C slack -o pid= | xargs kill -9"
+alias killPhpstorm="kill -9 $(pgrep -f phpstorm)"
+alias killSpotify="kill -9 $(pgrep -f potify | head -1)"
 
 tbcheck () {
     wget -q -O - https://www.terre-bitume.org/f109-sud-est \
